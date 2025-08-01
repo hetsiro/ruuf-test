@@ -238,6 +238,10 @@ export default function Home() {
 
       console.log(`Matriz del techo (${xValue}x${yValue}) con paneles (${aValue}x${bValue}):`);
       console.log(`Paneles colocados: ${panelsPlaced}/${targetPanels}`);
+      
+      if (panelsPlaced === 0) {
+        console.log("❌ No se pueden colocar paneles con estas dimensiones");
+      }
     }
   };
 
@@ -306,6 +310,11 @@ export default function Home() {
         {panelsPlaced > 0 && (
           <div className="text-white text-2xl font-bold mt-2 text-center">
             <p>Paneles colocados: <strong className="text-[var(--primary)]">{panelsPlaced}</strong></p>
+          </div>
+        )}
+        {panelsPlaced === 0 && matrix.length > 0 && (
+          <div className="text-white text-2xl font-bold mt-2 text-center">
+            <p className="text-red-400">❌ No se pueden colocar paneles con estas dimensiones</p>
           </div>
         )}
       </section>
