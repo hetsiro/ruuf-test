@@ -1,36 +1,23 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Visualizador de Techo Solar
 
-## Getting Started
+Herramienta para visualizar cómo colocar paneles solares en un techo rectangular. Calcula la mejor configuración para maximizar el número de paneles.
 
-First, run the development server:
+## Qué hace
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Toma las dimensiones del techo (x, y) y de los paneles (a, b), y encuentra la mejor manera de colocarlos. Muestra el resultado en una matriz visual donde cada panel tiene un número único.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Cómo funciona
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Prueba 5 estrategias diferentes y elige la que coloca más paneles:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+1. **Solo horizontales**: Coloca todos los paneles en orientación horizontal (a x b)
+2. **Solo verticales**: Coloca todos los paneles en orientación vertical (b x a)
+3. **Mezcla H+V**: Comienza con horizontales, luego agrega verticales donde quepa
+4. **Mezcla V+H**: Comienza con verticales, luego agrega horizontales donde quepa
+5. **División dinámica**: Prueba todos los puntos de división posibles con ambos patrones (H/V y V/H)
 
-## Learn More
+## ¿Por qué solo 5 estrategias?
 
-To learn more about Next.js, take a look at the following resources:
+Probar **todas** las combinaciones posibles sería computacionalmente imposible. Por ejemplo, un techo 6x6 tendría 3^36 = 150 billones de combinaciones posibles.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Las 5 estrategias cubren los casos más comunes y se ejecutan en tiempo razonable.
