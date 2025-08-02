@@ -247,7 +247,7 @@ export default function Home() {
 
   return (
     <main className="flex flex-col items-center justify-center h-screen">
-      <section className="bg-[var(--secondary-light)] w-200 h-200 rounded-2xl flex flex-col items-center justify-center">
+      <section className="bg-[var(--secondary-light)] p-8 rounded-2xl flex flex-col items-center justify-center">
         <div className="bg-white p-4 rounded-lg mb-4 max-w-full overflow-x-auto">
           <h3 className="text-center mb-2 font-bold text-gray-800">
             Visualización del Techo
@@ -256,7 +256,7 @@ export default function Home() {
             {matrix.length > 0 ? (
               renderMatrixAsHTML(matrix)
             ) : (
-              <div className="w-300 h-200 border-2 border-gray-800 bg-gray-100 flex items-center justify-center text-gray-500">
+              <div className="w-100 h-100 border-2 border-gray-800 bg-gray-100 flex items-center justify-center text-gray-500">
                 Ingresa valores y presiona Calculate
               </div>
             )}
