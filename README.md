@@ -2,6 +2,13 @@
 
 Herramienta para visualizar cómo colocar paneles solares en un techo rectangular. Calcula la mejor configuración para maximizar el número de paneles.
 
+## Tecnologías
+
+- React 19.1.0
+- TypeScript 5
+- Tailwind CSS 4
+- Next.js 15.4.5
+
 ## Instalación
 
 1. **Clona el repositorio:**
@@ -50,9 +57,6 @@ Las 5 estrategias cubren los casos más comunes y se ejecutan en tiempo razonabl
 3. Presiona "Calculate"
 4. Mira el resultado
 
-## Tecnologías
+## Portafolio con proyectos reales
 
-- React 18
-- TypeScript
-- Tailwind CSS
-- Next.js 14
+https://cristobal-fuentealba.vercel.app
