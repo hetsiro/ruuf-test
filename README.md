@@ -2,6 +2,10 @@
 
 Herramienta para visualizar cómo colocar paneles solares en un techo rectangular. Calcula la mejor configuración para maximizar el número de paneles.
 
+## Link del proyecto
+
+La app la puedes probar directamente entrando al link https://ruuf-test-wheat.vercel.app
+
 ## Tecnologías
 
 - React 19.1.0
